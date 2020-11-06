@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dnp\\Assignment1\\Assignment.csproj": {}
+    "D:\\dnp\\Assignment2\\Assignment2\\Assignment.csproj": {}
   },
   "projects": {
-    "D:\\dnp\\Assignment1\\Assignment.csproj": {
+    "D:\\dnp\\Assignment2\\Assignment2\\Assignment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dnp\\Assignment1\\Assignment.csproj",
+        "projectUniqueName": "D:\\dnp\\Assignment2\\Assignment2\\Assignment.csproj",
         "projectName": "Assignment",
-        "projectPath": "D:\\dnp\\Assignment1\\Assignment.csproj",
+        "projectPath": "D:\\dnp\\Assignment2\\Assignment2\\Assignment.csproj",
         "packagesPath": "C:\\Users\\abc\\.nuget\\packages\\",
-        "outputPath": "D:\\dnp\\Assignment1\\obj\\",
+        "outputPath": "D:\\dnp\\Assignment2\\Assignment2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\abc\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -19,13 +19,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Models/Person.cs" />
         <option value="$PROJECT_DIR$/Models/Client.cs" />
         <option value="$PROJECT_DIR$/Pages/Login.razor" />
         <option value="$PROJECT_DIR$/Models/ClientModel.cs" />
-        <option value="$PROJECT_DIR$/Pages/Search.razor" />
         <option value="$PROJECT_DIR$/Persistence/ClientModel.cs" />
+        <option value="$PROJECT_DIR$/Persistence/FileContext.cs" />
+        <option value="$PROJECT_DIR$/Models/Person.cs" />
+        <option value="$PROJECT_DIR$/Models/Adult.cs" />
+        <option value="$PROJECT_DIR$/Pages/Search.razor" />
         <option value="$PROJECT_DIR$/Program.cs" />
+        <option value="$PROJECT_DIR$/Pages/AddPerson.razor" />
       </list>
     </option>
   </component>
@@ -91,35 +94,36 @@
       <option name="presentableId" value="Default" />
       <updated>1604676112933</updated>
       <workItem from="1604676117966" duration="7876000" />
+      <workItem from="1604686050638" duration="3308000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="WindowStateProjectService">
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604676140049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604676140049" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1604684917552">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1604689061653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604684917552" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1604684917552">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604689061653" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1604689061653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604684917552" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1604684917552">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604689061653" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1604689061653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604684917552" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1604684917552">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604689061653" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1604689061653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604684917552" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604689061653" />
     <state x="776" y="219" key="RiderGenerateDialog" timestamp="1604680351060">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

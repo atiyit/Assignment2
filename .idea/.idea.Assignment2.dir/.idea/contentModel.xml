@@ -3,7 +3,8 @@
   <component name="ContentModelStore">
     <e p="C:\Users\abc\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\abc\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_.19.02" t="ExcludeRecursive" />
-    <e p="D:\dnp\Assignment2" t="IncludeRecursive">
+    <e p="D:\dnp\Assignment2\Assignment2" t="IncludeRecursive">
+      <e p=".gitattributes" t="Include" />
       <e p="_Imports.razor" t="Include" />
       <e p="adults.json" t="Include" />
       <e p="App.razor" t="Include" />

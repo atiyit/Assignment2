@@ -94,11 +94,6 @@
     </div>
     
     
-    @* <div class="form-group"> *@
-    @*         <label>Sex:</label> *@
-    @*         <input type="text" placeholder="sex" @bind-value="sex"/> *@
-    @*     </div> *@
-    @* *@
     <div class="form-group">
         <label>Haircolor:</label>
         <input type="text" placeholder="haircolor" @bind-value="hairColor"/>
@@ -147,18 +142,19 @@
             Person person = new Person();
             Adult adult = new Adult();
             FileContext fileContext = new FileContext();
-            person.Id = fileContext.Adults.Count;
-            person.FirstName = firstname;
-            person.LastName = lastname;
-            person.Sex = sex;
-            person.Age = age;
-            person.EyeColor = eyeColor;
-            person.HairColor = hairColor;
-            person.Height = height;
-            person.Weight = weight;
-            adult.JobTitle = job;
+            person.id = fileContext.Adults.Count;
+            person.firstName = firstname;
+            person.lastName = lastname;
+            person.sex = sex;
+            person.age = age;
+            person.eyeColor = eyeColor;
+            person.hairColor = hairColor;
+            person.height = height;
+            person.weight = weight;
+            adult.jobTitle = job;
             adult.Update(person);
             fileContext.Adults.Add(adult);
+            ClientModel.getInstance().addAdult(adult);
             fileContext.SaveChanges();
             message = "Add succeed!";
         } catch (Exception e) {

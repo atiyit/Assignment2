@@ -6,36 +6,36 @@ using System.Linq;
 namespace Models {
 public class Person {
     
-    public int Id { get; set; }
+    public int id { get; set; }
     [NotNull]
-    public string FirstName { get; set; }
+    public string firstName { get; set; }
     [NotNull]
-    public string LastName { get; set; }
+    public string lastName { get; set; }
     [ValidHairColor]
-    public string HairColor { get; set; }
+    public string hairColor { get; set; }
     [NotNull]
     [ValidEyeColor]
-    public string EyeColor { get; set; }
+    public string eyeColor { get; set; }
     [NotNull, Range(0, 125)]
-    public int Age { get; set; }
+    public int age { get; set; }
     [NotNull, Range(1, 250)]
-    public float Weight { get; set; }
+    public float weight { get; set; }
     [NotNull, Range(30, 250)]
-    public int Height { get; set; }
+    public int height { get; set; }
     [NotNull]
-    public string Sex { get; set; }
+    public string sex { get; set; }
 
     public void Update(Person toUpdate)
     {
-        Id = toUpdate.Id;
-        Age = toUpdate.Age;
-        Height = toUpdate.Height;
-        HairColor = toUpdate.HairColor;
-        Sex = toUpdate.Sex;
-        Weight = toUpdate.Weight;
-        EyeColor = toUpdate.EyeColor;
-        FirstName = toUpdate.FirstName;
-        LastName = toUpdate.LastName;
+        id = toUpdate.id;
+        age = toUpdate.age;
+        height = toUpdate.height;
+        hairColor = toUpdate.hairColor;
+        sex = toUpdate.sex;
+        weight = toUpdate.weight;
+        eyeColor = toUpdate.eyeColor;
+        firstName = toUpdate.firstName;
+        lastName = toUpdate.lastName;
     }
 
 }

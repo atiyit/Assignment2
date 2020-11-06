@@ -31,16 +31,16 @@
         <th>Weight</th>
     </TableHeader>
     <RowTemplate>
-        <td>@context.Id</td>
-        <td>@context.FirstName</td>
-        <td>@context.LastName</td>
-        <td>@context.Age</td>
-        <td>@context.Sex</td>
-        <td>@context.JobTitle</td>
-        <td>@context.HairColor</td>
-        <td>@context.EyeColor</td>
-        <td>@context.Height</td>
-        <td>@context.Weight</td>
+        <td>@context.id</td>
+        <td>@context.firstName</td>
+        <td>@context.lastName</td>
+        <td>@context.age</td>
+        <td>@context.sex</td>
+        <td>@context.jobTitle</td>
+        <td>@context.hairColor</td>
+        <td>@context.eyeColor</td>
+        <td>@context.height</td>
+        <td>@context.weight</td>
     </RowTemplate>
 </TableTemplate>
 
@@ -66,7 +66,7 @@
         {
             if (lastName ==null && firstName ==null)
             {
-                if (adults[i].Age >= minAge && adults[i].Age <= maxAge && adults[i].Sex == sex)
+                if (adults[i].age >= minAge && adults[i].age <= maxAge && adults[i].sex == sex)
                 {
                     Adult adult = adults[i];
                     result.Add(adult);
@@ -74,7 +74,7 @@
             }
             else if (lastName == null)
             {
-                if (adults[i].Age >= minAge && adults[i].Age <= maxAge && adults[i].Sex == sex && adults[i].FirstName==firstName)
+                if (adults[i].age >= minAge && adults[i].age <= maxAge && adults[i].sex == sex && adults[i].firstName==firstName)
                 {
                     Adult adult = adults[i];
                     result.Add(adult);
@@ -82,7 +82,7 @@
             }
             else if (firstName == null)
             {
-                if (adults[i].Age >= minAge && adults[i].Age <= maxAge && adults[i].Sex == sex && adults[i].LastName==lastName)
+                if (adults[i].age >= minAge && adults[i].age <= maxAge && adults[i].sex == sex && adults[i].lastName==lastName)
                 {
                     Adult adult = adults[i];
                     result.Add(adult);
@@ -90,7 +90,7 @@
             }
             else
             {
-                if (adults[i].Age >= minAge && adults[i].Age <= maxAge && adults[i].Sex == sex && adults[i].FirstName==firstName && adults[i].LastName==lastName)
+                if (adults[i].age >= minAge && adults[i].age <= maxAge && adults[i].sex == sex && adults[i].firstName==firstName && adults[i].lastName==lastName)
                 {
                     Adult adult = adults[i];
                     result.Add(adult);
