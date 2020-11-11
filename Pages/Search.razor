@@ -96,18 +96,24 @@
                     result.Add(adult);
                 }
             }
+           
         }
+        Console.WriteLine("search!");
         if (result.Count == 0)
         {
             message = "No match!";
         }
+        
+       
+        
     }
-    
     
     public async Task clear()
     {
         result.Clear();
         message = "";
     }
+
+   
 
 }

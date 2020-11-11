@@ -1,15 +1,16 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "D:\\dnp\\Assignment2\\Assignment2\\Assignment.csproj",
+    "projectUniqueName": "C:\\Users\\yu\\Desktop\\Assignment2-main\\Assignment.csproj",
     "projectName": "Assignment",
-    "projectPath": "D:\\dnp\\Assignment2\\Assignment2\\Assignment.csproj",
-    "outputPath": "D:\\dnp\\Assignment2\\Assignment2\\obj\\",
+    "projectPath": "C:\\Users\\yu\\Desktop\\Assignment2-main\\Assignment.csproj",
+    "outputPath": "C:\\Users\\yu\\Desktop\\Assignment2-main\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"
     ],
     "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
@@ -43,7 +44,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "C:\\Users\\abc\\.dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
     }
   }
 }

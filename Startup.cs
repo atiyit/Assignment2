@@ -24,16 +24,11 @@ public class Startup {
         services.AddRazorPages();
         services.AddServerSideBlazor();
         services.AddScoped<IUserService, InMemoryUserService>();
-        
         services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 
         services.AddAuthorization(options => {
-            options.AddPolicy("Manager",  a => 
-                a.RequireAuthenticatedUser().RequireClaim("Role", "Manager"));
-            options.AddPolicy("Admin",  a => 
+          options.AddPolicy("Admin",  a => 
                 a.RequireAuthenticatedUser().RequireClaim("Role", "Admin"));
-            options.AddPolicy("Guest",  a => 
-                a.RequireAuthenticatedUser().RequireClaim("Role", "Guest"));
         });
     }
 

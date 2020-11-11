@@ -12,16 +12,13 @@
     </NotAuthorized>
 </AuthorizeView>
 
-<AuthorizeView Policy="Guest">
-        <p>You don't have permission to access!</p>
-</AuthorizeView>
-<AuthorizeView Policy="Manager">
-    
+<AuthorizeView Policy="Admin">
+
     <div class="form-group">
         <label>Firstname：</label>
         <input type="text" placeholder="firstname" @bind-value="firstname"/>
     </div>
-    
+
     <div class="form-group">
         <label>Lastname：</label>
         <input type="text" placeholder="lastname" @bind-value="lastname"/>
@@ -30,79 +27,41 @@
         <label>Age:</label>
         <input type="text" placeholder="age" oninput="value=value.replace(/[^\d]/g,'')" @bind-value="age"/>
     </div>
-    
-    <div class="form-group">
-                <label>Sex:</label>
-                <input type="text" placeholder="sex" @bind-value="sex"/>
-            </div>
-        
-        <div class="form-group">
-                     <label>Haircolor:</label>
-                     <input type="text" placeholder="haircolor" @bind-value="hairColor"/>
-                 </div>
-        
-        
-         <div class="form-group">
-                         <label>Eyecolor:</label>
-                         <input type="text" placeholder="eyecolor" @bind-value="eyeColor"/>
-                     </div>
-    
-    <div class="form-group">
-        <label>Height:</label>
-        <input type="text" placeholder="height" oninput="value=value.replace(/[^\d]/g,'')" @bind-value="height"/>
-    </div>
-    <div class="form-group">
-        <label>Weight:</label>
-        <input type="text" placeholder="weight" oninput="value=value.replace(/[^\d.]/g,'')" @bind-value="weight"/>
-    </div>
-    
-    <div class="form-group">
-        <label>Job:</label>
-        <input type="text" placeholder="job" @bind-value="job"/>
-    </div>
-    
-    <button @onclick="addPerson">
-        add
-    </button>
-    <div>@message</div>
-</AuthorizeView>
 
-<AuthorizeView Policy="Admin">
-    
-    <div class="form-group">
-        <label>Firstname：</label>
-        <input type="text" placeholder="firstname" @bind-value="firstname"/>
-    </div>
-    
-    <div class="form-group">
-                    <label>Lastname：</label>
-                    <input type="text" placeholder="lastname" @bind-value="lastname"/>
-                </div>
-    <div class="form-group">
-        <label>Age:</label>
-        <input type="text" placeholder="age" oninput="value=value.replace(/[^\d]/g,'')" @bind-value="age"/>
-    </div>
-    
-    
-    
+
     <div class="form-group">
         <label>Sex:</label>
-        <select @bind="sex">
-            <option>M</option>
-            <option>F</option>
+        <select @onchange="@setSex">
+            <option value="M">M</option>
+            <option value="F">F</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Haircolor:</label>
+        <select @onchange="@setHair">
+            <option value="Blond">Blond</option>
+            <option value="Red">Red</option>
+            <option value="Brown">Brown</option>
+            <option value="Black">Black</option>
+            <option value="White">White</option>
+            <option value="Grey">Grey</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
         </select>
     </div>
     
-    
     <div class="form-group">
-        <label>Haircolor:</label>
-        <input type="text" placeholder="haircolor" @bind-value="hairColor"/>
+        <label>Eyecolor:</label>
+        <select @onchange="@setEye">
+            <option value="Brown">Brown</option>
+            <option value="Amber">Amber</option>
+            <option value="Hazel">Hazel</option>
+            <option value="Grey">Grey</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+        </select>
     </div>
-    
-    <div class="form-group">
-                     <label>Eyecolor:</label>
-                     <input type="text" placeholder="eyecolor" @bind-value="eyeColor"/>
-                 </div>
     
     <div class="form-group">
         <label>Height:</label>
@@ -112,30 +71,50 @@
         <label>Weight:</label>
         <input type="text" placeholder="weight" oninput="value=value.replace(/[^\d.]/g,'')" @bind-value="weight"/>
     </div>
-    
+
     <div class="form-group">
         <label>Job:</label>
         <input type="text" placeholder="job" @bind-value="job"/>
     </div>
-    
+
     <button @onclick="addPerson">
         add
     </button>
-     <div style="color:red">@message</div>
+    <div style="color:red">@message</div>
 </AuthorizeView>
 
 @code {
     private string firstname;
     private string lastname;
-    private string sex;
+    private string sex = "M";
     private int age;
-    private string hairColor;
-    private string eyeColor;
+    private string hairColor="Blond";
+    private string eyeColor="Brown";
     private int height;
     private float weight;
     private string message;
     private string job;
-    public async Task addPerson() {
+
+    public void setHair(ChangeEventArgs args)
+    {
+        string result = args.Value.ToString();
+        hairColor = result;
+    }
+
+    public void setEye(ChangeEventArgs args)
+    {
+        string result = args.Value.ToString();
+        eyeColor = result;
+    }
+
+    public void setSex(ChangeEventArgs args)
+    {
+        string result = args.Value.ToString();
+        sex = result;
+    }
+
+    public async Task addPerson()
+    {
         message = "";
         try
         {
@@ -157,10 +136,11 @@
             ClientModel.getInstance().addAdult(adult);
             fileContext.SaveChanges();
             message = "Add succeed!";
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             message = e.Message;
         }
     }
-
 
 }

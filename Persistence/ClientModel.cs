@@ -24,27 +24,22 @@ namespace Assignment.Models
 
                 return clientModel;
             }
-
-
             public string GetAdultJson()
             {
                 Task<string> data = GetDataAsync();
                 string result = data.GetAwaiter().GetResult();
                 return result;
             }
-
             public void addAdult(Adult adult)
             {
-                addAdult(adult);
+                PostData(adult);
             }
-        
-        static async Task<string> GetDataAsync()
+            static async Task<string> GetDataAsync()
         {
             HttpClient client = new HttpClient();
             string s = await client.GetStringAsync("http://dnp.metamate.me/Adults");
             return s;
         }
-        
         static async Task<string> PostData(Adult adult)
         {
             HttpClient client = new HttpClient();
@@ -53,8 +48,7 @@ namespace Assignment.Models
                 adultSerialized,Encoding.UTF8,
                 "application/json"
                 );
-
-            HttpResponseMessage response = await client.PostAsync("http://dnp.metamate.me/Adults", content);
+            HttpResponseMessage response = await client.PutAsync("http://dnp.metamate.me/Adults", content);
             return response.ToString();
         }
         
